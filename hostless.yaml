@@ -1,0 +1,10 @@
+name: my-app
+app:
+  command: node server.js
+  build:
+    system: nixpacks
+  healthcheck:
+    path: /health
+  env:
+    - name: MY_SECRET
+      from: env
